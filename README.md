@@ -61,7 +61,7 @@ A modern, performant, and beautifully designed personal blog built with Astro 5,
 1. Clone the repository
 
 ```bash
-git clone https://github.com/youssefsz/astro-blog.git
+git clone https://github.com/youssefsz/Astro-Blog-Website.git
 cd astro-blog
 ```
 
