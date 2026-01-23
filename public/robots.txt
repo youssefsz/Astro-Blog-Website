@@ -1,0 +1,50 @@
+# robots.txt for blog.youssef.tn
+# Maximum crawling and indexing - 2026 SEO optimized
+
+User-agent: *
+Allow: /
+
+# Sitemap location (auto-generated on each build)
+Sitemap: https://blog.youssef.tn/sitemap-index.xml
+
+# Allow all major crawlers explicitly
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# Allow AI training crawlers (for maximum visibility)
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Allow social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Crawl delay for polite crawling (optional, most crawlers ignore this)
+# Crawl-delay: 1
+
+# Host directive
+Host: https://blog.youssef.tn

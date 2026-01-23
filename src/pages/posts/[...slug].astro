@@ -1,0 +1,79 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+
+export async function getStaticPaths() {
+    const posts = await getCollection("posts");
+    return posts.map((post) => ({
+        params: { slug: post.slug },
+        props: { post },
+    }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const dateFormatted = new Date(post.data.date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+});
+---
+
+<Layout
+    title={post.data.title}
+    description={post.data.excerpt}
+    image={post.data.image}
+    article={true}
+    publishedTime={new Date(post.data.date).toISOString()}
+    category={post.data.category}
+>
+    <article class="max-w-3xl mx-auto animate-fade-in-up">
+        <header class="mb-12 text-center">
+            <Badge
+                variant="outline"
+                className="mb-6 uppercase tracking-widest text-xs border-foreground/30"
+            >
+                {post.data.category}
+            </Badge>
+            <h1
+                class="text-4xl md:text-6xl font-bold tracking-tighter mb-6 leading-tight"
+            >
+                {post.data.title}
+            </h1>
+            <div
+                class="flex items-center justify-center gap-4 text-sm text-muted-foreground uppercase tracking-wider font-medium"
+            >
+                <span>{dateFormatted}</span>
+                <span>•</span>
+                <span>{post.data.readTime}</span>
+            </div>
+        </header>
+
+        {
+            post.data.image && (
+                <div class="w-full bg-muted mb-16 overflow-hidden relative group">
+                    <img
+                        src={post.data.image}
+                        alt={post.data.title}
+                        class="w-full h-auto transition-all duration-700 group-hover:scale-105"
+                        loading="lazy"
+                    />
+                </div>
+            )
+        }
+
+        <div
+            class="prose prose-neutral prose-lg dark:prose-invert max-w-none
+			prose-headings:font-bold prose-headings:tracking-tighter
+			prose-h1:text-3xl prose-h2:text-2xl
+			prose-p:text-muted-foreground prose-p:leading-loose"
+        >
+            <Content />
+        </div>
+
+        <Separator className="my-16" />
+    </article>
+</Layout>

@@ -1,26 +1,107 @@
 ---
-import '../styles/global.css';
-// Component Imports
-import Button from '../components/Button.astro';
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import { Button } from "@/components/ui/button";
+import {
+	Card,
+	CardContent,
+	CardDescription,
+	CardFooter,
+	CardHeader,
+	CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
 
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
+const posts = (await getCollection("posts")).sort(
+	(a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf(),
+);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro + TailwindCSS</title>
-	</head>
-
-	<body>
-		<div class="grid place-items-center h-screen content-center">
-			<Button>Tailwind Button in Astro!</Button>
-			<a href="/markdown-page" class="p-4 underline">Markdown is also supported...</a>
+<Layout title="Youssef's Blog">
+	<header
+		class="mb-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-center animate-fade-in-up"
+	>
+		<div class="max-w-2xl">
+			<Badge
+				variant="outline"
+				className="mb-4 text-xs tracking-widest uppercase border-foreground/20"
+			>
+				Youssef Dhibi
+			</Badge>
+			<h1
+				class="text-5xl md:text-7xl font-bold tracking-tighter mb-6 leading-none"
+			>
+				Full Stack Mobile <span class="text-muted-foreground">&</span
+				><br />
+				Web Developer.
+			</h1>
+			<p class="text-xl text-muted-foreground max-w-lg leading-relaxed">
+				Welcome to my blog. I share insights on mobile and web
+				development, exploring a wide range of topics from engineering
+				to design.
+			</p>
 		</div>
-	</body>
-</html>
+		<div
+			class="relative aspect-square md:aspect-[4/5] lg:aspect-square max-w-md mx-auto md:ml-auto w-full overflow-hidden rounded-2xl border border-border/50 bg-muted shadow-2xl skew-y-2 hover:skew-y-0 transition-transform duration-700 ease-out"
+		>
+			<img
+				src="https://youssef.tn/ysf.webp"
+				alt="Youssef Dhibi"
+				class="object-cover w-full h-full"
+				loading="eager"
+			/>
+		</div>
+	</header>
+
+	<Separator className="my-12 opacity-50" />
+
+	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+		{
+			posts.map((post) => (
+				<div class="group h-full">
+					<a
+						href={`/posts/${post.slug}`}
+						class="block h-full cursor-pointer"
+					>
+						<Card className="h-full border border-border/50 bg-card/30 backdrop-blur-[2px] shadow-sm hover:shadow-md hover:bg-accent/5 transition-all duration-500 ease-out group-hover:translate-y-[-4px] overflow-hidden flex flex-col">
+							<div class="aspect-[4/3] overflow-hidden bg-muted relative">
+								<div class="absolute inset-0 bg-foreground/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+								{post.data.image && (
+									<img
+										src={post.data.image}
+										alt={post.data.title}
+										class="object-cover w-full h-full transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-105"
+										loading="lazy"
+									/>
+								)}
+							</div>
+							<CardHeader className="p-6 pb-2 space-y-3">
+								<div class="flex items-center justify-between text-xs text-muted-foreground uppercase tracking-wider">
+									<span>{post.data.category}</span>
+									<span>{post.data.readTime}</span>
+								</div>
+								<CardTitle className="text-2xl font-bold leading-tight group-hover:text-primary transition-colors duration-300">
+									{post.data.title}
+								</CardTitle>
+							</CardHeader>
+							<CardContent className="px-6 py-0 mb-auto">
+								<CardDescription className="text-base text-muted-foreground/80 line-clamp-2 leading-relaxed">
+									{post.data.excerpt}
+								</CardDescription>
+							</CardContent>
+							<CardFooter className="p-6 pt-4 border-t border-border/40 flex justify-between items-center mt-4">
+								<span class="text-xs font-medium">
+									{post.data.date}
+								</span>
+								<span class="text-xs font-bold uppercase tracking-widest border-b border-transparent group-hover:border-foreground transition-all">
+									Read Article
+								</span>
+							</CardFooter>
+						</Card>
+					</a>
+				</div>
+			))
+		}
+	</div>
+</Layout>
