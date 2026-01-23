@@ -62,7 +62,7 @@ A modern, performant, and beautifully designed personal blog built with Astro 5,
 
 ```bash
 git clone https://github.com/youssefsz/Astro-Blog-Website.git
-cd astro-blog
+cd astro-blog-Website
 ```
 
 2. Install dependencies
