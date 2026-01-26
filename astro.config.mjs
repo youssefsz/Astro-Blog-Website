@@ -6,6 +6,7 @@ import sitemap from '@astrojs/sitemap';
 
 import remarkBreaks from 'remark-breaks';
 import { rehypeLazyImage } from './src/lib/rehype-lazy-image.mjs';
+import { rehypeExternalLinks } from './src/lib/rehype-external-links.mjs';
 import react from '@astrojs/react';
 
 // https://astro.build/config
@@ -16,7 +17,7 @@ export default defineConfig({
   },
   markdown: {
     remarkPlugins: [remarkBreaks],
-    rehypePlugins: [rehypeLazyImage],
+    rehypePlugins: [rehypeLazyImage, rehypeExternalLinks],
   },
   integrations: [
     react(),
