@@ -4,7 +4,7 @@ excerpt: "A case study on how a single line of configuration in SQLAlchemy cause
 category: "Engineering"
 date: "2026-01-24"
 readTime: "4 min read"
-image: "/Posts/imgs/one-line-fix.png"
+image: "../../assets/Posts/imgs/one-line-fix.png"
 ---
 
 Performance bottlenecks in modern web applications often hide in plain sight, masked by the convenience of Object Relational Mappers (ORMs). I recently encountered a severe latency issue in my uptime monitor project where a simple dashboard page load had degraded to over 4 seconds.

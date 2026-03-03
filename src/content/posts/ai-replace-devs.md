@@ -4,7 +4,7 @@ excerpt: "Artificial intelligence is not replacing developers but shifting the i
 category: "Tech"
 date: "2025-12-19"
 readTime: "4 min read"
-image: "/Posts/imgs/will-ai-replace-devs.png"
+image: "../../assets/Posts/imgs/will-ai-replace-devs.png"
 ---
 
 The question of whether artificial intelligence will replace software engineers is often met with binary answers. However, current data suggests a more nuanced transition. AI is not a replacement for developers; rather, developers who leverage AI effectively are becoming the new industry standard.

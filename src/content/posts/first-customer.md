@@ -4,7 +4,7 @@ excerpt: "Celebrating the first paying customer for the Invox invoice maker app,
 category: "Update"
 date: "2026-01-21"
 readTime: "2 min read"
-image: "/Posts/imgs/first-paying-costumer-mobile-app.png"
+image: "../../assets/Posts/imgs/first-paying-costumer-mobile-app.png"
 ---
 
 Securing the first paying customer is often cited as the most significant milestone for any new software product. It transforms a side project into a validated business.

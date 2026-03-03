@@ -4,7 +4,7 @@ excerpt: "Introducing sys-monitor: A blazingly fast, lightweight, and keyboard-d
 category: "Tech"
 date: "2026-02-23"
 readTime: "4 min read"
-image: "/Posts/imgs/sys-monitor.png"
+image: "../../assets/Posts/imgs/sys-monitor.png"
 ---
 
 When it comes to system monitoring, developers often face a common dilemma: modern GUI tools are notoriously resource-heavy, while traditional command-line utilities can be clunky, visually unappealing, or lacking in real-time clarity. We need software that respects our system's resources while providing instant, actionable insights.

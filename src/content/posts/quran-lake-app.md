@@ -4,7 +4,7 @@ excerpt: "Introducing QuranLake, a fully open-source mobile application built wi
 category: "Flutter"
 date: "2026-02-25"
 readTime: "3 min read"
-image: "/Posts/imgs/Quran-lake.jpg"
+image: "../../assets/Posts/imgs/Quran-lake.jpg"
 ---
 
 Today, I am incredibly proud to announce the release of **QuranLake**, a mobile application dedicated entirely to providing a seamless experience for reading the Quran and tracking daily prayer times.

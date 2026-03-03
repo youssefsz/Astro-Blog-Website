@@ -4,7 +4,7 @@ excerpt: "While anonymity can offer privacy, it often breeds disrespect and nega
 category: "Community"
 date: "2025-12-10"
 readTime: "4 min read"
-image: "/Posts/imgs/anonymous-comments.png"
+image: "../../assets/Posts/imgs/anonymous-comments.png"
 ---
 
 Anonymous interaction is a fundamental feature of the internet, designed to protect privacy and encourage open expression. However, in professional developer communities, this feature often facilitates what psychologists call the [Online Disinhibition Effect](https://www.sciencedirect.com/science/article/abs/pii/S0747563225002742). When individuals feel their identity is hidden, they may act with less restraint, leading to behaviors that are disrespectful, sarcastic, or unduly harsh.

@@ -4,7 +4,7 @@ excerpt: "Offering to work for free on paid job posts creates contradiction, dev
 category: "Community"
 date: "2026-01-26"
 readTime: "2 min read"
-image: "/Posts/imgs/Paid-Jobs.png"
+image: "../../assets/Posts/imgs/Paid-Jobs.png"
 ---
 
 In developer groups, it is common to see job posts where the author clearly states that the work is paid. When someone responds by offering to do the same work for free, it creates an unnecessary contradiction.

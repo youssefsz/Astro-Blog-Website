@@ -4,7 +4,7 @@ excerpt: "Announcing the launch of my newly redesigned portfolio at dhibi.tn. A 
 category: "Portfolio"
 date: "2026-02-17"
 readTime: "2 min read"
-image: "/Posts/imgs/new-portfolio.png"
+image: "../../assets/Posts/imgs/new-portfolio.png"
 ---
 
 I am thrilled to announce the launch of my newly redesigned portfolio website!

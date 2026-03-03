@@ -4,7 +4,7 @@ excerpt: "Announcing the launch of Invox, a dedicated invoice management applica
 category: "Launch"
 date: "2026-01-06"
 readTime: "2 min read"
-image: "/Posts/imgs/just-lunched-invoice-maker-app.png"
+image: "../../assets/Posts/imgs/just-lunched-invoice-maker-app.png"
 ---
 
 I am excited to announce the official release of **Invox**, a streamlined invoicing solution tailored for freelancers and small agencies.

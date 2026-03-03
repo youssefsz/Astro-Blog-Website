@@ -12,6 +12,9 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://blog.youssef.tn',
+  image: {
+    domains: ['youssef.tn'],
+  },
   vite: {
     plugins: [tailwindcss()],
   },

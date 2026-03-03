@@ -4,7 +4,7 @@ excerpt: "A case study on using AI to build a clean, dark-mode compatible GitHub
 category: "Project"
 date: "2025-12-02"
 readTime: "2 min read"
-image: "/Posts/imgs/git-stats.png"
+image: "../../assets/Posts/imgs/git-stats.png"
 ---
 
 Rapid prototyping is one of the most compelling use cases for modern AI coding tools. I recently experimented with building a GitHub Stats Extractor, leveraging the [GitHub REST API](https://docs.github.com/en/rest) to visualize user data.
@@ -20,4 +20,4 @@ Using an AI assistant (v0), I was able to generate a fully functional, dark mode
 This project serves as a proof of concept that AI, when guided by clear engineering requirements, can drastically reduce the time to ship usable micro tools.
 
 **Source Code:** [GitHub Repository](https://github.com/youssefsz/github-stats-extractor)  
-**Live Demo:** [Vercel Deployment](https://git-hub-stats-extractor.vercel.app/)
+**Live Demo:** [Vercel Deployment](https://github-stats-extractor.youssef.tn/)

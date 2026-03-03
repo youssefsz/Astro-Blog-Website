@@ -4,7 +4,7 @@ excerpt: "Speed in delivery is a result of expertise, not a reason to pay less. 
 category: "Freelancing"
 date: "2025-12-11"
 readTime: "3 min read"
-image: "/Posts/imgs/speed-is-a-result-of-skill.png"
+image: "../../assets/Posts/imgs/speed-is-a-result-of-skill.png"
 ---
 
 A common point of friction in freelance engagements is the correlation between time and cost. Clients often intuitively equate "hours worked" with "value generated." However, in knowledge work, this equation is fundamentally flawed. The value of a project should be measured by the quality of the outcome and the reliability of the process, not by the duration of the execution.

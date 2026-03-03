@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { Image } from "astro:assets";
 
 export async function getStaticPaths() {
     const posts = await getCollection("posts");
@@ -25,7 +26,9 @@ const dateFormatted = new Date(post.data.date).toLocaleDateString("en-US", {
 <Layout
     title={post.data.title}
     description={post.data.excerpt}
-    image={post.data.image}
+    image={typeof post.data.image === "object"
+        ? post.data.image.src
+        : post.data.image}
     article={true}
     publishedTime={new Date(post.data.date).toISOString()}
     category={post.data.category}
@@ -55,11 +58,12 @@ const dateFormatted = new Date(post.data.date).toLocaleDateString("en-US", {
         {
             post.data.image && (
                 <div class="w-full bg-muted mb-16 overflow-hidden relative group">
-                    <img
+                    <Image
                         src={post.data.image}
                         alt={post.data.title}
                         class="w-full h-auto transition-all duration-700 group-hover:scale-105"
-                        loading="lazy"
+                        loading="eager"
+                        fetchpriority="high"
                     />
                 </div>
             )

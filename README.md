@@ -82,12 +82,8 @@ pnpm dev
 ## Project Structure
 
 ```
-├── public/
-│   ├── favicons/          # Favicon files for all platforms
-│   ├── Posts/             # Post images and assets
-│   ├── og-img.png         # Open Graph image
-│   └── robots.txt         # Crawler instructions
 ├── src/
+    ├── assets/              # Assets and images
 │   ├── components/
 │   │   └── ui/            # shadcn/ui components
 │   ├── content/

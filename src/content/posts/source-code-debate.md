@@ -4,7 +4,7 @@ excerpt: "Deciding whether to include source code depends on the project type. C
 category: "Business"
 date: "2025-12-08"
 readTime: "4 min read"
-image: "/Posts/imgs/developers-and-source-code.png"
+image: "../../assets/Posts/imgs/developers-and-source-code.png"
 ---
 
 The question of who owns the source code in a software project is a common source of friction between developers and clients. This debate often stems from a lack of clear contractual definitions regarding [Intellectual Property (IP) rights](https://patentpc.com/blog/who-owns-source-code). The answer rarely falls into a simple binary but depends heavily on the nature of the engagement.

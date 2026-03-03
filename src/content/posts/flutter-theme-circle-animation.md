@@ -4,7 +4,7 @@ excerpt: "Enhance your Flutter app's user experience with a beautiful circle rev
 category: "Flutter"
 date: "2026-03-02"
 readTime: "3 min read"
-image: "/Posts/imgs/flutter_theme_circle_animation.jpg"
+image: "../../assets/Posts/imgs/flutter_theme_circle_animation.jpg"
 ---
 
 Creating a seamless and visually appealing user experience is one of the most critical aspects of modern app development. When users interact with your application, smooth transitions can make the interface feel much more premium and polished. 

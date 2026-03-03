@@ -4,7 +4,7 @@ excerpt: "Using AI in software development is an evolution of engineering tools.
 category: "Tech"
 date: "2025-12-02"
 readTime: "4 min read"
-image: "/Posts/imgs/the-truth-about-using-ai-in-software-development.png"
+image: "../../assets/Posts/imgs/the-truth-about-using-ai-in-software-development.png"
 ---
 
 There is a common misconception that using artificial intelligence in software development is a shortcut or a way to bypass fundamental learning. In reality, professional AI assisted development is a sophisticated extension of modern engineering practices, much like the adoption of high level languages or integrated development environments.
