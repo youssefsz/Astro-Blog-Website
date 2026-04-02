@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
-import { Button } from "@/components/ui/button";
 import {
 	Card,
 	CardContent,
@@ -63,7 +62,7 @@ const posts = (await getCollection("posts")).sort(
 			posts.map((post) => (
 				<div class="group h-full">
 					<a
-						href={`/posts/${post.slug}`}
+						href={`/posts/${post.id}`}
 						class="block h-full cursor-pointer"
 					>
 						<Card className="h-full border border-border/50 bg-card/30 backdrop-blur-[2px] shadow-sm hover:shadow-md hover:bg-accent/5 transition-all duration-500 ease-out group-hover:translate-y-[-4px] overflow-hidden flex flex-col">

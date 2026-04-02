@@ -1,7 +1,5 @@
 ---
 import "@/styles/global.css";
-import { Button } from "@/components/ui/button";
-
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 
 interface Props {
@@ -222,16 +220,19 @@ const articleSchema = article
 
         <!-- JSON-LD Structured Data -->
         <script
+            is:inline
             type="application/ld+json"
             set:html={JSON.stringify(websiteSchema)}
         />
         <script
+            is:inline
             type="application/ld+json"
             set:html={JSON.stringify(personSchema)}
         />
         {
             articleSchema && (
                 <script
+                    is:inline
                     type="application/ld+json"
                     set:html={JSON.stringify(articleSchema)}
                 />
